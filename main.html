@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Dessertify</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            header {
+                border-style: hidden;
+                background-color: #db58ff;
+                color: #ffdb58;
+                padding: 30px;
+                height: 200px;
+            }
+            footer {
+                border-style: hidden;
+                background-color: #db58ff;
+                color: #ffdb58;
+                padding: 30px;
+            }
+            h1 {
+                font-size: 75px;
+                letter-spacing: 1px;
+                padding-top: 20px;
+                padding-left: 65px;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            }
+            h3 {
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-size: 50px;
+                padding-left: 15px;
+                width: 80%;
+                letter-spacing: 1px;
+            }
+            pre {
+                text-align: right;
+                font-size: 25px;
+            }
+            h2 {
+                float: right;
+                display: inline;
+                padding: 25px;
+                margin-top: -40px;
+                font-size: 20px;
+            }
+            body {
+                background-color: #58ffdb;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            button {
+                border-style: hidden;
+                border-radius: 10px;
+                background-color: #db58ff;
+                color: #ffdb58;
+                font-size: 30px;
+            }
+            #slogon {
+                border-style: hidden;
+                margin-left: 20px;
+                margin-right: 20px;
+                border-color: #db58ff;
+            }
+            #red  {
+                border-style: hidden;
+                position: relative;
+            }
+            #cheesecake {
+                border-style: hidden; 
+                position: relative;
+            }
+            a {
+                text-decoration: none;
+                color: #ffdb58;
+            }
+            #tart {
+                border-style: hidden;
+                position: relative;
+            }
+            hr {
+                align-items: center;
+            }
+            @media screen and (max-width:700px){
+                body {
+                    background-color: #db58ff;
+                    color: #ffdb58;
+                }
+                #slogon {
+                    color:  #db58ff;
+                }
+            }
+        </style>
+    </head>
+    <body>
+    <header>
+        <h1>Dessertify</h1>
+        <div>
+            <h2><a href="about.html" target="_self">About Us</a></h2>
+            <h2 id="signInLink"><a href="si.html" target="_self">Sign In</a></h2>
+            <script>function getQueryParam(param) {
+                var urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(param);
+            }
+            
+            var username = getQueryParam("username");
+            
+            if (username) {
+                document.getElementById("signInLink").innerHTML = `<a>${username}</a>`;
+            }</script>
+            <div style="float: right;
+            display: inline;
+            padding: 25px;
+            margin-top: -40px;
+            font-size: 20px;">
+                <button class="dropdown">                </button>
+                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 23px; color: #ffdb58;border-style: hidden;margin-top: -10px;margin-right: -5px;">
+                        Recipes
+                    </button>
+                    <ul class="dropdown-menu" style="background-color: #db58ff;color:#ffdb58;">
+                      <li><a class="dropdown-item" href="desserts.html" target="_self" style="color:#ffdb58;">CheeseCake</a></li>
+                      <li><a class="dropdown-item" href="tart.html" target="_self" style="color:#ffdb58;">BakeWell Tart</a></li>
+                      <li><a class="dropdown-item" href="red.html" target="_self"  style="color:#ffdb58;">Red Velvet Cake</a></li>
+                    </ul>
+                </div>
+        </div>
+    </header>
+    <br><br>
+        <div id="slogon">
+            <p style="font-size: 40px;text-align: center;border-style:solid; border-color: #db58ff; background-color: #ffdb58; color: #db58ff; border-radius: 10px;">...Dessertify: Indulge in Sweet Creations!</p>
+        </div>
+        <br>
+        <br>
+        <div id="cheesecake">
+            <img src="https://media.istockphoto.com/id/1212582234/photo/piece-of-savoury-cheesecake-with-herbs-decorated-sun-dried-tomatoes-cheese-and-fresh-basil.jpg?s=612x612&w=0&k=20&c=NggEUgiW4rGpzB3XMApRULigYYvIInxRVN7HusGgb8g=" style="width: 80%;height:450px;margin-left: 105px;" class="flex-container" alt="">
+            <p style="font-size: 50px;position: absolute; top: 20%;left:15%;color: #db58ff;">CheeseCake</p>
+            <p style="position: absolute; top: 52%;left:17%;font-size: 25px;">
+                <button onclick="window.open('desserts.html', '_self')">Find Out More</button>
+            </p>
+        </div><br>
+        <br>
+        <div id="red">
+            <img src="https://media.istockphoto.com/id/133286679/photo/red-velvet-cake.jpg?s=612x612&w=0&k=20&c=IPyGDGLCvDZYgpyBYji1s5U9-LZt6pOtoY72ro5zbbM=" style="width: 80%;height:450px;margin-left: 105px;" alt="">
+            <p style="font-size: 50px;position: absolute; top: 20%;left:15%;color: #db58ff;">Red Velvet Cake</p>
+            <p style="position: absolute; top: 53%;left:18%;font-size: 25px;"> 
+                <button onclick="window.open('red.html', '_self')">Find Out More</button>
+            </p>
+        </div><br>
+        <br>
+        <div id="tart">
+            <img src="https://media.istockphoto.com/id/1314774577/photo/strawberry-almond-bakewell-tart.jpg?s=612x612&w=0&k=20&c=BaTCyvtcCc5vMGfyQ0RvT3D6GUa89X2AxvVU67xwkyU=" style="width: 80%;height:450px;margin-left: 105px;" class="flex-container" alt="">
+            <p style="font-size: 50px; position: absolute; top: 20%;left:15%;color: #db58ff;">BakeWell Tart</p>
+            <p style="position: absolute; top: 53%;left:17%;font-size: 25px;">
+                <button onclick="window.open('tart.html', '_self')">Find Out More</button>
+                </p>
+        </div><br>
+        <br>
+    <footer>
+        <h3>Dessertify</h3>
+        <pre>
+        Phone: 07********4
+        <br>
+        Email: www.habibakbar1092@outlook.com
+        <br>
+        Instagram: ......
+        </pre>
+        <div style="text-align: center;font-size: larger;">@2025 Dessertify All Rights Reserved</div>
+    </footer>
+</body>
+</html>
